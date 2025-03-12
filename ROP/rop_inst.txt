@@ -1,0 +1,8 @@
+Inspect the memory of a process: sudo cat /proc/PID/maps
+
+Libc change with patchelf:
+    patchelf --set-interpreter PATH_TO_LOADER ELF_FILE
+    patchelf --print-needed ELF_FILE
+    patchelf --replace-needed LIBRARY_TO_BE_REPLACE NEW_LIBRARY ELF_FILE
+
+To check if something is changed: readelf -s ELF_FILE | grep main

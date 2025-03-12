@@ -1,0 +1,11 @@
+- Convert bzImage to ELF file: $ vmlinux-to-elf bzImage_file elf_file_name
+
+- Get a symbol from the kernel: $ cat /proc/kallsyms (must be root)
+
+- Check kernel version: $ uname -r
+
+- Check generated assembly code: $ objdump -M intel -D path_to_exploit | grep -A 20 function_name
+
+- Upload exploit: $ python upload_exploit.py exploit_binary url port --ssl -e /home/user/exploit
+
+- Create a file without magic headers: $ echo -ne "\x00" > b

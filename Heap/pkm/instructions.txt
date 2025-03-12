@@ -1,0 +1,8 @@
+To compile: $ afl-gcc-fast c_file -o output_file
+
+To compile with address sanitizer: $ AFL_USE_ASAN=1 afl-gcc-fast c_file -o output_file
+
+To fuzz: we need to use seeds (input to be passed to the program)
+    $ afl-fuzz -i input_dir -o output_dir -- program_to_execute
+
+    To look to the crashes: see output directory

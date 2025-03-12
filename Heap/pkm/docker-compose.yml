@@ -1,0 +1,10 @@
+services:
+  fuzzer:
+    image: aflplusplus/aflplusplus
+    volumes:
+      - ./challenge:/challenge
+      - ./seed:/seed
+      - ./output:/output
+      - ./pkm.c:/challenge/challenge.c
+
+    command: tail -f /dev/null
