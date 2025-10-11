@@ -36,8 +36,8 @@ In this case there are some vulnerabilities in the kernel of the operating syste
 ## Malware
 Two different categories of malware are considered in this section:
 - packing -> the "real" code of the application is packed and the decryption is only made at runtime
-- code-on-demand -> the vulnerable code is delivered to the application through the sockets
-In both cases it is necessary to use tools like gdb to control the flow of instructions execution <br> to get the actual malicious code.
+- code-on-demand -> the vulnerable code is delivered to the application through the sockets <br>
+In both cases it is necessary to use tools like gdb to control the flow of instructions execution to get the actual malicious code.
 
 ## Race conditions
 Bugs in the file system or in process management must be exploiting to get the flags.
