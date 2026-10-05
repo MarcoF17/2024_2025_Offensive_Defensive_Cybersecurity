@@ -16,7 +16,7 @@ Challenges are grouped in the following categories:
 These challenges consist in exploiting a buffer overflow vulnerabilty to execute a custom shellcode. In some cases, the original code of the application already contains a function that prints the flag, so it is enough to overwrite the savedEIP on the stack with the address of that function. In other cases, it is required to write a shellcode to perform the execve("/bin/sh\0") or the open-read-write chain of syscalls to get the flag.
 
 ## Mitigations
-Pretty similar the the aforementioned challenges but this time some techniques to mitigate the exploitation are implemented, like stack-canary, ASRL, PIE, non-executable-stack.
+Pretty similar the the aforementioned challenges but this time some techniques to mitigate the exploitation are implemented, like stack-canary, ASLR, PIE, non-executable-stack.
 
 ## Reversing
 In this section, the challenges are based on the ability to reverse-engineer an executable file with tools like Ghidra or IDA.
